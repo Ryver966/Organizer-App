@@ -97,3 +97,34 @@ p{
 .user{
     margin-top: 15%;
 }
+
+.warning{
+    display: none;
+}
+
+.tasksScreen{
+    visibility: hidden;
+    width: 43.75%;
+    height: 56.25%;
+    background-color:  #1E90FF;
+    margin: 0 28.125% 21.875% 28.125%;
+    padding-top: 9%;
+    text-align: center;
+}
+
+.taskName{
+    width: 70%;
+}
+
+.addTaskBut{
+    height: 8%;
+    width: 8%;
+    border: none;
+    background-color: #1f1f1f;
+    color: #1E90FF;
+    text-align: center;
+}
+
+.list{
+background-color: #fff;
+}

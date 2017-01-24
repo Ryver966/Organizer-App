@@ -1,5 +1,9 @@
-let main = document.getElementsByClassName('main')[0];
-
+document.onreadystatechange = function () {
+     if (document.readyState == "complete") {
+        const main = document.getElementsByClassName('main')[0];
+        console.log(main);
+    };
+};
 function goToMain(){
     console.log(main);
     document.getElementsByClassName('lockScreen')[0].style.display = 'none';

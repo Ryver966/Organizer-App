@@ -108,12 +108,13 @@ p{
     height: 56.25%;
     background-color:  #1E90FF;
     margin: 0 28.125% 21.875% 28.125%;
-    padding-top: 9%;
+    padding-top: 60px;
     text-align: center;
 }
 
 .taskName{
     width: 70%;
+    margin-top: 0;
 }
 
 .addTaskBut{
@@ -126,5 +127,17 @@ p{
 }
 
 .list{
-background-color: #fff;
+background-color: #1f1f1f;
+text-align: left;
+height: 100%;
+}
+
+.checkbox{
+    background-color: #1E90FF;
+}
+
+.label{
+    width: 100%;
+    background-color: #1E90FF;
+    color: #FFF;
 }

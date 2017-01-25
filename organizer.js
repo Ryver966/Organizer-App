@@ -8,7 +8,7 @@ window.onload = function () {
         main.style.visibility = 'visible';
     };
 
-    window. logIn = function /*logIn*/() {
+    window.logIn = function /*logIn*/() {
         const user = document.getElementById('userName');
         const pass = document.getElementById('password');
         console.log(user.value);
@@ -37,13 +37,34 @@ function useAddBut(event) {
     }
 };
 
+const list = document.getElementsByClassName('list')[0];
+
+function newTask(taskName) {
+//Label
+    const newlabel = document.createElement("Label");
+    newlabel.for = taskName;
+    newlabel.innerHTML = taskName.value;
+    newlabel.class = 'label';
+//Checkbox
+    const newCheckbox = document.createElement('input');
+    newCheckbox.type = 'checkbox';
+    newCheckbox.class = 'checkbox';
+//Adding all to element
+    document.getElementsByClassName('list')[0].appendChild(newCheckbox);
+    document.getElementsByClassName('list')[0].appendChild(newlabel);
+    document.getElementsByClassName('list')[0].appendChild(document.createElement('br'));
+
+    const task = document.getElementsByClassName('taskName')[0];
+    task.value = '';
+};
+
 function addTask() {
     const warning = document.getElementsByClassName('warning')[0];
-    const taskName = document.getElementsByClassName('taskName')[0];
-    if (taskName.value.length === 0) {
+    const task = document.getElementsByClassName('taskName')[0];
+    if (task.value.length === 0) {
         warning.style.display = 'block';
     } else {
         warning.style.display = 'none';
-        document.getElementsByClassName('ist')[0].innerHTML = '';
+        const addToList = newTask(task);
     }
 }

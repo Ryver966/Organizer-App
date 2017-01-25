@@ -1,8 +1,8 @@
-function load () {
+window.onload = function () {
     const main = document.getElementsByClassName('main')[0];
     console.log(main);
 
-    function goToMain() {
+    window.goToMain = function/* goToMain*/() {
         console.log(main);
         document.getElementsByClassName('lockScreen')[0].style.display = 'none';
         main.style.visibility = 'visible';

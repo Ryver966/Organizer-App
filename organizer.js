@@ -1,8 +1,8 @@
-window.onload = function () {
+function load () {
     const main = document.getElementsByClassName('main')[0];
     console.log(main);
 
-    window.goToMain = function/* goToMain*/() {
+    function goToMain() {
         console.log(main);
         document.getElementsByClassName('lockScreen')[0].style.display = 'none';
         main.style.visibility = 'visible';
@@ -45,6 +45,10 @@ function newTask(taskName) {
     newlabel.for = taskName;
     newlabel.innerHTML = taskName.value;
     newlabel.className = 'taskLabel';
+//Delete icon
+    const deleteIcon = document.createElement('i');
+    deleteIcon.className = 'material-icons';
+    deleteIcon.innerHTML = 'delete';
 //Checkbox
     const newCheckbox = document.createElement('input');
     newCheckbox.type = 'checkbox';

@@ -44,15 +44,16 @@ function newTask(taskName) {
     const newlabel = document.createElement("Label");
     newlabel.for = taskName;
     newlabel.innerHTML = taskName.value;
-    newlabel.class = 'label';
+    newlabel.className = 'taskLabel';
 //Checkbox
     const newCheckbox = document.createElement('input');
     newCheckbox.type = 'checkbox';
-    newCheckbox.class = 'checkbox';
+    newCheckbox.className = 'taskCheckbox';
 //Adding all to element
     document.getElementsByClassName('list')[0].appendChild(newCheckbox);
     document.getElementsByClassName('list')[0].appendChild(newlabel);
     document.getElementsByClassName('list')[0].appendChild(document.createElement('br'));
+    document.getElementsByClassName('list')[0].appendChild(document.createElement('hr'));
 
     const task = document.getElementsByClassName('taskName')[0];
     task.value = '';

@@ -100,15 +100,23 @@ p{
 
 .warning{
     display: none;
+    background-color: #1f1f1f;
+    color: #1E90FF;
+    width:70%;
+    height: 8%;
+    margin: 0 15% 0 15%;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 8px;
 }
 
 .tasksScreen{
     visibility: hidden;
     width: 43.75%;
-    height: 56.25%;
+    height: 50%;
     background-color:  #1E90FF;
     margin: 0 28.125% 21.875% 28.125%;
-    padding-top: 60px;
+    padding-top: 50px;
     text-align: center;
 }
 
@@ -130,14 +138,24 @@ p{
 background-color: #1f1f1f;
 text-align: left;
 height: 100%;
+max-height: auto;
 }
 
-.checkbox{
-    background-color: #1E90FF;
+.taskCheckbox{
+    height: 4%;
+    width: 4%;
+    margin-top: 5px;
 }
 
-.label{
-    width: 100%;
-    background-color: #1E90FF;
+.taskLabel{
+    font-size: 150%;
     color: #FFF;
+}
+
+hr{
+    height: 1px;
+    border: none;
+    border-top: 1px solid #1E90FF;
+    margin: 1em 0;
+    padding: 0;
 }

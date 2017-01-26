@@ -22,22 +22,18 @@ window.onload = function () {
     };
 };
 
-function doSth(event) {
+function doSth(event, element) {
     const x = event.keyCode;
     if (x === 13) {
-        const loginBut = document.getElementsByClassName('loginBut')[0];
+        const loginBut = document.getElementsByClassName(element)[0];
         loginBut.click();
     };
 };
 
-function useAddBut(event) {
-    const x = event.keyCode;
-    if (x === 13) {
-        document.getElementsByClassName('addTaskBut')[0].click();
-    }
-};
-
 const list = document.getElementsByClassName('list')[0];
+console.log(list);
+const task = document.getElementsByClassName('taskName')[0];
+console.log(task);
 
 function newTask(taskName) {
 //Label
@@ -65,7 +61,7 @@ function newTask(taskName) {
 
 function addTask() {
     const warning = document.getElementsByClassName('warning')[0];
-    const task = document.getElementsByClassName('taskName')[0];
+    
     if (task.value.length === 0) {
         warning.style.display = 'block';
     } else {

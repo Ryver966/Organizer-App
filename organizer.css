@@ -113,43 +113,49 @@ p{
 .tasksScreen{
     visibility: hidden;
     width: 43.75%;
-    height: 50%;
-    background-color:  #1E90FF;
-    margin: 0 28.125% 21.875% 28.125%;
-    padding-top: 50px;
+    margin: 0 28.125% 0 28.125%;
+    padding-top: 0px;
     text-align: center;
 }
 
 .taskName{
-    width: 70%;
+    width: 92%;
+    height: 45px;
     margin-top: 0;
+    background-color: #1F1F1F;
+    color: #fff;
 }
 
 .addTaskBut{
-    height: 8%;
-    width: 8%;
+    height: 45px;
+    width: 30px;
     border: none;
-    background-color: #1f1f1f;
-    color: #1E90FF;
+    background-color: #1E90FF;
+    color: #1F1F1F;
     text-align: center;
 }
 
 .list{
-background-color: #1f1f1f;
-text-align: left;
-height: 100%;
-max-height: auto;
+    background-color: #1f1f1f;
+    text-align: left;
+    height: auto;
+    width: 100%;
+    max-height: auto;
 }
 
 .taskCheckbox{
-    height: 4%;
+    height: 45px;
     width: 4%;
-    margin-top: 5px;
+    margin-top: 0%;
+    background-color: #1f1f1f;
 }
 
 .taskLabel{
+    height: 16%;
     font-size: 150%;
     color: #FFF;
+    height: 45px;
+    width: 100%;
 }
 
 hr{

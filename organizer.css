@@ -9,7 +9,7 @@ body{
     width: 405px;
     height: 500px;
     background-color:  #1E90FF;
-    margin: 0 28.125% 21.875% 28.125%;
+    margin: 0 auto;
     padding-top: 110px;
 }
 
@@ -54,27 +54,23 @@ p{
 }
 
 .lockScreen{
-    width: 43.75%;
-    height: 56.25%;
+    width: 405px;
+    height: 500px;
     background-color:  #1E90FF;
-    margin: 0 28.125% 21.875% 28.125%;
+    margin: 0 auto;
     padding-top: 9%;
     text-align: center;
 }
 
 .material-icons{
-   width: 200px;
-   height: 200px;
-   position: absolute;
-   left: 50%;
-   top: 50%; 
-   margin-left: -150px;
-   margin-top: -250px;
+   width: 220px;
+   height: 220px;
+   margin: 0 auto;
    color: white;
 }
 
 .unlockScrTxt{
-    margin-top: 45%;
+    margin-top: auto;
     font-size: 250%;
     font-weight: bold;
     font-family: Avantgarde, sans-serif;
@@ -82,7 +78,7 @@ p{
 }
 
 .unlockFooter{
-    margin-top: 60%;
+    margin-top: 200px;
     font-family: Avantgarde, sans-serif;
     font-size: 120%;
     color: #fff;
@@ -112,8 +108,8 @@ p{
 
 .tasksScreen{
     visibility: hidden;
-    width: 43.75%;
-    margin: 0 28.125% 0 28.125%;
+    width: 405px;
+    margin: 0 auto;
     text-align: left;
     padding-top: -114px;
 }
@@ -121,7 +117,7 @@ p{
 .taskName{
     width: 350px;
     height: 55px;
-    margin-top: 0;
+    margin-top: 0 auto;
     background-color: #1F1F1F;
     color: #fff;
     border: none;
@@ -140,6 +136,7 @@ p{
 
 .addTaskBut:hover{
     background-color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .list{

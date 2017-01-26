@@ -66,10 +66,3 @@ window.onload = function () {
         };
     };
 };
-
-
-
-
-
-
-

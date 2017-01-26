@@ -6,11 +6,11 @@ body{
 
 .main{
     visibility: hidden;
-    width: 43.75%;
-    height: 56.25%;
+    width: 405px;
+    height: 500px;
     background-color:  #1E90FF;
     margin: 0 28.125% 21.875% 28.125%;
-    padding-top: 9%;
+    padding-top: 110px;
 }
 
 h1{
@@ -114,45 +114,51 @@ p{
     visibility: hidden;
     width: 43.75%;
     margin: 0 28.125% 0 28.125%;
-    padding-top: 0px;
-    text-align: center;
+    text-align: left;
+    padding-top: -114px;
 }
 
 .taskName{
-    width: 92%;
-    height: 45px;
+    width: 350px;
+    height: 55px;
     margin-top: 0;
     background-color: #1F1F1F;
     color: #fff;
+    border: none;
+    border-bottom: 1px solid #1E90FF;
 }
 
 .addTaskBut{
-    height: 45px;
-    width: 30px;
+    height: 55px;
+    width: 55px;
     border: none;
+    border-bottom: 1px solid #1E90FF;
     background-color: #1E90FF;
     color: #1F1F1F;
     text-align: center;
+}
+
+.addTaskBut:hover{
+    background-color: #fff;
 }
 
 .list{
     background-color: #1f1f1f;
     text-align: left;
     height: auto;
-    width: 100%;
-    max-height: auto;
+    width: 405px;
 }
 
 .taskCheckbox{
-    height: 45px;
+    height: 35px;
     width: 4%;
     margin-top: 0%;
     background-color: #1f1f1f;
 }
 
 .taskLabel{
-    height: 16%;
-    font-size: 150%;
+    height: 45px;
+    font-size: 120%;
     color: #FFF;
     height: 45px;
     width: 100%;

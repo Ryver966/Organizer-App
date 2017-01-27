@@ -87,7 +87,7 @@ p{
 .unlockScr{
     border: none;
     background: none;
-    width: 100%;
+    width: 405px;
 }
 
 .user{
@@ -98,11 +98,11 @@ p{
     display: none;
     background-color: #1f1f1f;
     color: #1E90FF;
-    width:70%;
-    height: 8%;
-    margin: 0 15% 0 15%;
+    width:303.75px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 25px;
     text-align: center;
-    padding-top: 20px;
     border-radius: 8px;
 }
 
@@ -149,8 +149,9 @@ p{
 .taskCheckbox{
     height: 35px;
     width: 4%;
-    margin-top: 0%;
+    margin-left: 5px;
     background-color: #1f1f1f;
+    position: center;
 }
 
 .taskLabel{

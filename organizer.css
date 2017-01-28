@@ -144,22 +144,21 @@ p{
     text-align: left;
     height: auto;
     width: 405px;
+    padding: 0px;
+    margin: 0px;
+    visibility: hidden;
 }
 
 .taskCheckbox{
-    height: 35px;
-    width: 4%;
-    margin-left: 5px;
-    background-color: #1f1f1f;
-    position: center;
+    width: 20px;
+    height: 20px;
+    float: left;
 }
 
 .taskLabel{
-    height: 45px;
+
     font-size: 120%;
     color: #FFF;
-    height: 45px;
-    width: 100%;
 }
 
 hr{
@@ -168,4 +167,24 @@ hr{
     border-top: 1px solid #1E90FF;
     margin: 1em 0;
     padding: 0;
+}
+
+#deleteIcon{
+    float: right;
+    margin-left: 80%;
+}
+
+.deleteButton{
+    background: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    float: right;
+    margin-right: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.deleteButton material-icons{
+    color: red;
 }

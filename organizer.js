@@ -42,7 +42,12 @@ window.onload = function () {
         //Delete icon
         const deleteIcon = document.createElement('i');
         deleteIcon.className = 'material-icons';
+        deleteIcon.id = 'deleteIcon';
         deleteIcon.innerHTML = 'delete';
+        //Delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'deleteButton';
+        deleteButton.onclick = 'deleteTask()';
         //Checkbox
         const newCheckbox = document.createElement('input');
         newCheckbox.type = 'checkbox';
@@ -50,8 +55,9 @@ window.onload = function () {
         //Adding all to element
         list.appendChild(newCheckbox);
         list.appendChild(newlabel);
-        list.appendChild(document.createElement('br'));
         list.appendChild(document.createElement('hr'));
+        list.appendChild(deleteButton);
+        deleteButton.appendChild(deleteIcon);
 
         task.value = '';
     };
@@ -62,6 +68,7 @@ window.onload = function () {
             warning.style.display = 'block';
         } else {
             warning.style.display = 'none';
+            list.style.visibility = 'visible'
             const addToList = newTask(task);
         };
     };

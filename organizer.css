@@ -197,6 +197,31 @@ hr{
     text-align: center;
 }
 
-.checkFilling{
+.registerBut{
+    background-color: #1E90FF;
+    border: none;
+    color: #1F1F1F;
+    width: 45%;
+    height: 8%;
+    font-family: Avantgarde, sans-serif;
+}
+
+.newAccTxt{
+    margin-top: auto;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: Avantgarde, sans-serif;
+    color: #fff;
+}
+
+.createAcc input{
+    color:#1F1F1F;
+}
+
+.sucessRegMsg{
+    display: none;
+}
+
+.no-sucessRegMsg{
     display: none;
 }

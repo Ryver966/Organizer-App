@@ -2,8 +2,10 @@ window.onload = function () {
     const main = document.getElementsByClassName('main')[0];
     const list = document.getElementsByClassName('list')[0];
     const task = document.getElementsByClassName('taskName')[0];
+    const taskScr = document.getElementsByClassName('tasksScreen')[0];
     const newAcc = document.getElementsByClassName('createAcc')[0];
     const lockScreen = document.getElementsByClassName('unlockScr')[0];
+
     window.goToMain = function () {
         console.log(main);
         lockScreen.style.display = 'none';
@@ -17,7 +19,7 @@ window.onload = function () {
         console.log(pass.value);
         if (user.value === 'admin' && pass.value === 'admin') {
             main.style.display = 'none';
-            document.getElementsByClassName('tasksScreen')[0].style.visibility = 'visible';
+            taskScr.style.visibility = 'visible';
         } else {
             alert('Wrong user name or passwod. Try again.');
         };
@@ -73,9 +75,16 @@ window.onload = function () {
         };
     };
 
-    window.createAcc = function (){
+    window.createAcc = function (mail, name, pass, passRe) {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
+        taskScr.style.display = 'none';
         newAcc.style.visibility = 'visible';
+
+        if (mail.value !== '' && name.value !== '' && pass.value !== '' && passRe.value !== '' && pass.value === passRe.value) {
+            document.getElementsByClassName('sucessRegMsg')[0].style.display = 'block';
+        } else {
+            document.getElementsByClassName('no-scuessRegMsg')[0].style.display = 'block';
+        }
     }
-};
+}

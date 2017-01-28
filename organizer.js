@@ -1,14 +1,12 @@
 window.onload = function () {
     const main = document.getElementsByClassName('main')[0];
-    console.log(main);
     const list = document.getElementsByClassName('list')[0];
-    console.log(list);
     const task = document.getElementsByClassName('taskName')[0];
-    console.log(task);
-
+    const newAcc = document.getElementsByClassName('createAcc')[0];
+    const lockScreen = document.getElementsByClassName('unlockScr')[0];
     window.goToMain = function () {
         console.log(main);
-        document.getElementsByClassName('lockScreen')[0].style.display = 'none';
+        lockScreen.style.display = 'none';
         main.style.visibility = 'visible';
     };
 
@@ -39,6 +37,7 @@ window.onload = function () {
         newlabel.for = taskName;
         newlabel.innerHTML = taskName.value;
         newlabel.className = 'taskLabel';
+        newlabel.id = taskName;
         //Delete icon
         const deleteIcon = document.createElement('i');
         deleteIcon.className = 'material-icons';
@@ -47,13 +46,12 @@ window.onload = function () {
         //Delete button
         const deleteButton = document.createElement('button');
         deleteButton.className = 'deleteButton';
-        deleteButton.onclick = function(){
-            console.log('it work');
-        };
+        //deleteButton.onclick = deleteTask();
         //Checkbox
         const newCheckbox = document.createElement('input');
         newCheckbox.type = 'checkbox';
         newCheckbox.className = 'taskCheckbox';
+        newCheckbox.id = taskName;
         //Adding all to element
         list.appendChild(newCheckbox);
         list.appendChild(newlabel);
@@ -74,4 +72,10 @@ window.onload = function () {
             const addToList = newTask(task);
         };
     };
+
+    window.createAcc = function (){
+        main.style.display = 'none';
+        lockScreen.style.display = 'none';
+        newAcc.style.visibility = 'visible';
+    }
 };

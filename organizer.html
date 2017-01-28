@@ -20,13 +20,18 @@
             <input type='text' id='userName' class='user' placeholder='User Name'><br><br>
             <input type='password' id='password' placeholder='Password' onkeyup='doSth(event, "loginBut")'><br><br>
             <button class='loginBut' onclick='logIn()'>Sign In</button><br><br>
-            <button class='accFunc'>Create new account</button><br>
+            <button class='accFunc' onclick='createAcc()'>Create new account</button><br>
             <button class='accFunc'>Forgot password?</button>
         </div>
         <div class='tasksScreen'>
             <p class='warning'>Please enter task</p><br><br>
             <input type='text' class='taskName' onkeyup='doSth(event, "addTaskBut")' placeholder='Enter what you need to do'><button class ='addTaskBut' onclick='addTask()'>+</button>
             <div class='list'><br></div>
+        </div>
+
+        <div class='createAcc'>
+            <p class='checkFilling'>Please fill all</p>
+            <p class='newAccTxt'>Create <span style='color: #1E90FF'>New</span> Account</p>
         </div>
     </body>
 

@@ -186,3 +186,17 @@ hr{
     display: flex;
     justify-content: flex-start;
 }
+
+.createAcc{
+    visibility: hidden;
+    width: 405px;
+    height: 500px;
+    background-color:  #1F1F1F;
+    margin: 0 auto;
+    padding-top: 9%;
+    text-align: center;
+}
+
+.checkFilling{
+    display: none;
+}

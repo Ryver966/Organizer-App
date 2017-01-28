@@ -47,7 +47,9 @@ window.onload = function () {
         //Delete button
         const deleteButton = document.createElement('button');
         deleteButton.className = 'deleteButton';
-        deleteButton.onclick = 'deleteTask()';
+        deleteButton.onclick = function(){
+            console.log('it work');
+        };
         //Checkbox
         const newCheckbox = document.createElement('input');
         newCheckbox.type = 'checkbox';
@@ -55,9 +57,9 @@ window.onload = function () {
         //Adding all to element
         list.appendChild(newCheckbox);
         list.appendChild(newlabel);
-        list.appendChild(document.createElement('hr'));
         list.appendChild(deleteButton);
         deleteButton.appendChild(deleteIcon);
+        list.appendChild(document.createElement('hr'));
 
         task.value = '';
     };

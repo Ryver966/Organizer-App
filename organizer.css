@@ -172,19 +172,17 @@ hr{
 #deleteIcon{
     float: right;
     margin-left: 80%;
+    height: 30px;
+    width: 30px;
 }
 
 .deleteButton{
     background: none;
     border: none;
-    height: 20px;
-    width: 20px;
+    height: 32px;
+    width: 32px;
     float: right;
     margin-right: 15px;
     display: flex;
     justify-content: flex-start;
-}
-
-.deleteButton material-icons{
-    color: red;
 }

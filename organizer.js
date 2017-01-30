@@ -32,7 +32,7 @@ window.onload = function () {
             loginBut.click();
         };
     };
-//ADD TASKS
+    //ADD TASKS
     window.newTask = function (taskName) {
         //Label
         const newlabel = document.createElement("Label");
@@ -74,7 +74,7 @@ window.onload = function () {
             const addToList = newTask(task);
         };
     };
-//REGISTER
+    //REGISTER
     window.createAcc = function () {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
@@ -82,25 +82,25 @@ window.onload = function () {
         newAcc.style.visibility = 'visible';
     };
 
-    window.signUpFunc = function() {
+    window.signUpFunc = function () {
         const mail = document.getElementsByClassName('newUserEmail')[0];
         const name = document.getElementsByClassName('newUserName')[0];
         const pass = document.getElementsByClassName('newUserPass')[0];
         const passRe = document.getElementsByClassName('newUserPassRe')[0];
         const regMsg = document.getElementsByClassName('regMsg')[0];
-        if (mail.value.length > 0 && name.value.length > 0 && pass.value.length > 0 && passRe.value.length > 0 && pass.value === passRe.value){
+        if (mail.value.length > 0 && name.value.length > 0 && pass.value.length > 0 && passRe.value.length > 0 && pass.value === passRe.value) {
             regMsg.innerHTML = 'Your account has been created';
-            console.log('checked');
         } else {
-            if(mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0){
-                regMsg.innerHTML= 'Please complete all fields';
-            } else if(pass.value !== passRe.value){
+            if (mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0) {
+                regMsg.innerHTML = 'Please complete all fields';
+            } else if (pass.value !== passRe.value) {
                 regMsg.innerHTML = 'Password in both fields must be the same';
-            } else if(mail !== /\S+@\S+\.\S+/){
+            } else if (mail !== /\S+@\S+\.\S+/) {
                 regMsg.innerHTML = 'Wrong email format';
-            } else if(){
-
-            }
+            } else if (pass.value.length < 6) {
+                regMsg.innerHTML = 'Password is too short. It should have 6 or more characters';
+            } else if (pass !== /\[abc]+[0-9]/ || pass !== /\[0-9]+[abc]/) {
+                regMsg.innerHTML = 'Password should have charatcers and numbers';
             }
         }
     }

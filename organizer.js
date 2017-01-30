@@ -32,7 +32,7 @@ window.onload = function () {
             loginBut.click();
         };
     };
-
+//ADD TASKS
     window.newTask = function (taskName) {
         //Label
         const newlabel = document.createElement("Label");
@@ -74,17 +74,20 @@ window.onload = function () {
             const addToList = newTask(task);
         };
     };
-
-    window.createAcc = function (mail, name, pass, passRe) {
+//REGISTER
+    window.createAcc = function () {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
         taskScr.style.display = 'none';
         newAcc.style.visibility = 'visible';
+    };
 
-        if (mail.value !== '' && name.value !== '' && pass.value !== '' && passRe.value !== '' && pass.value === passRe.value) {
+    window.signUpFunc = function(mail, name, pass, passRe) {
+        if (mail.length > 0 && name.value > 0 && pass.length > 0 && passRe.length > 0 && pass.value === passRe.value) {
             document.getElementsByClassName('sucessRegMsg')[0].style.display = 'block';
         } else {
-            document.getElementsByClassName('no-scuessRegMsg')[0].style.display = 'block';
+            document.getElementsByClassName('no-sucessRegMsg')[0].style.display = 'block';
+            console.log('test');
         }
     }
 }

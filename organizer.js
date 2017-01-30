@@ -88,20 +88,18 @@ window.onload = function () {
         const pass = document.getElementsByClassName('newUserPass')[0];
         const passRe = document.getElementsByClassName('newUserPassRe')[0];
         const regMsg = document.getElementsByClassName('regMsg')[0];
-        if (mail.value.length > 0 && name.value.length > 0 && pass.value.length > 0 && passRe.value.length > 0 && pass.value === passRe.value) {
-            regMsg.innerHTML = 'Your account has been created';
+        if (mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0) {
+            regMsg.innerHTML = 'Please complete all fields';
+        } else if (pass.value !== passRe.value) {
+            regMsg.innerHTML = 'Password in both fields must be the same';
+        } else if (mail.value !== /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/) {
+            regMsg.innerHTML = 'Wrong email format';
+        } else if (pass.value.length < 6) {
+            regMsg.innerHTML = 'Password is too short. It should have 6 or more characters';
+        } else if (pass.value !== /[abc]+[0-9]/ || pass.value !== /[0-9]+[abc]/) {
+            regMsg.innerHTML = 'Password should have charatcers and numbers';
         } else {
-            if (mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0) {
-                regMsg.innerHTML = 'Please complete all fields';
-            } else if (pass.value !== passRe.value) {
-                regMsg.innerHTML = 'Password in both fields must be the same';
-            } else if (mail !== /\S+@\S+\.\S+/) {
-                regMsg.innerHTML = 'Wrong email format';
-            } else if (pass.value.length < 6) {
-                regMsg.innerHTML = 'Password is too short. It should have 6 or more characters';
-            } else if (pass !== /\[abc]+[0-9]/ || pass !== /\[0-9]+[abc]/) {
-                regMsg.innerHTML = 'Password should have charatcers and numbers';
-            }
+            regMsg.innerHTML = 'Your account has been created';
         }
     }
 }

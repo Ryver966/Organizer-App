@@ -82,13 +82,21 @@ window.onload = function () {
         newAcc.style.visibility = 'visible';
     };
 
-    window.signUpFunc = function(mail, name, pass, passRe) {
-        console.log(mail.value);
-        if (mail.length > 0 && name.value > 0 && pass.length > 0 && passRe.length > 0 && pass.value === passRe.value) {
-            document.getElementsByClassName('sucessRegMsg')[0].style.display = 'block';
+    window.signUpFunc = function() {
+        const mail = document.getElementsByClassName('newUserEmail')[0];
+        const name = document.getElementsByClassName('newUserName')[0];
+        const pass = document.getElementsByClassName('newUserPass')[0];
+        const passRe = document.getElementsByClassName('newUserPassRe')[0];
+        const sucessReg = document.getElementsByClassName('sucessRegMsg')[0];
+        const noSucessReg = document.getElementsByClassName('no-sucessRegMsg')[0];
+        if (mail.value.length > 0 && name.value.length > 0 && pass.value.length > 0 && passRe.value.length > 0 && pass.value === passRe.value) {
+            sucessReg.style.display = 'block';
+            noSucessReg.style.display = 'none';
+            console.log('checked');
         } else {
-            document.getElementsByClassName('no-sucessRegMsg')[0].style.display = 'block';
-            console.log('test');
+            noSucessReg.style.display = 'block';
+            sucessReg.style.display = 'none';
+            console.log('warning');
         }
     }
 }

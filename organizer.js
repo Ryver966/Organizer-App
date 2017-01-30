@@ -87,16 +87,16 @@ window.onload = function () {
         const name = document.getElementsByClassName('newUserName')[0];
         const pass = document.getElementsByClassName('newUserPass')[0];
         const passRe = document.getElementsByClassName('newUserPassRe')[0];
-        const sucessReg = document.getElementsByClassName('sucessRegMsg')[0];
-        const noSucessReg = document.getElementsByClassName('no-sucessRegMsg')[0];
+        const regMsg = document.getElementsByClassName('regMsg')[0];
         if (mail.value.length > 0 && name.value.length > 0 && pass.value.length > 0 && passRe.value.length > 0 && pass.value === passRe.value) {
-            sucessReg.style.display = 'block';
-            noSucessReg.style.display = 'none';
+            regMsg.innerHTML = 'Your account has been created';
             console.log('checked');
         } else {
-            noSucessReg.style.display = 'block';
-            sucessReg.style.display = 'none';
-            console.log('warning');
+            if(pass.value !== passRe.value){
+                regMsg.innerHTML = 'Password in both fields must be the same';
+            } else if(){
+                
+            }
         }
     }
 }

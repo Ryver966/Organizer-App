@@ -83,6 +83,7 @@ window.onload = function () {
     };
 
     window.signUpFunc = function(mail, name, pass, passRe) {
+        console.log(mail.value);
         if (mail.length > 0 && name.value > 0 && pass.length > 0 && passRe.length > 0 && pass.value === passRe.value) {
             document.getElementsByClassName('sucessRegMsg')[0].style.display = 'block';
         } else {

@@ -30,10 +30,10 @@
         </div>
         <div class='createAcc'>
             <p class='newAccTxt'>Create <span style='color: #1E90FF'>New</span> Account</p>
-            <input type='email' class='newUserEmail' placeholder='name@domain.com'><br><br>
-            <input type='text' class='newUserName' placeholder='User name'><br><br>
-            <input type='password' class='newUserPass' placeholder='Password'><br><br>
-            <input type='password' class='newUserPassRe' placeholder='Repeat Password'><br><br>
+            <input type='email' class='newUserEmail' onkeyup='doSth(event, "registerBut")' placeholder='name@domain.com'><br><br>
+            <input type='text' class='newUserName' onkeyup='doSth(event, "registerBut")' placeholder='User name'><br><br>
+            <input type='password' class='newUserPass' onkeyup='doSth(event, "registerBut")' placeholder='Password'><br><br>
+            <input type='password' class='newUserPassRe' onkeyup='doSth(event, "registerBut")' placeholder='Repeat Password'><br><br>
             <button class='registerBut' onclick='signUpFunc()'>Sign Up</button>
             <p class='regMsg'></p>
         </div>

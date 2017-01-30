@@ -89,6 +89,8 @@ window.onload = function () {
         const passRe = document.getElementsByClassName('newUserPassRe')[0];
         const regMsg = document.getElementsByClassName('regMsg')[0];
 
+        regMsg.style.display = 'block';
+
         const mailPatt= /^[a-zA-Z0-9.-]+@[a-zA-z0-9.-]+\.[a-zA-Z]{2,4}$/;
         const passPatt = /[abc]+[0-9]/;
         const passPatt1 = /[0-9]+[abc]/;
@@ -101,7 +103,7 @@ window.onload = function () {
         } else if (pass.value.length < 6) {
             regMsg.innerHTML = 'Password is too short. It should have 6 or more characters';
         } else if (passPatt.test(pass.value) === false && passPatt1.test(pass.value) === false) {
-            regMsg.innerHTML = 'Password should have charatcers and numbers';
+            regMsg.innerHTML = 'Password should have letters and numbers';
         } else {
             regMsg.innerHTML = 'Your account has been created';
         }

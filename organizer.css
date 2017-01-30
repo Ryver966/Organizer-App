@@ -217,3 +217,16 @@ hr{
 .createAcc input{
     color:#1F1F1F;
 }
+
+.regMsg{
+    display: none;
+    font-weight: bold;
+    background-color: #fff;
+    color: #1E90FF;
+    width:303.75px;
+    height: 40px;
+    margin: 50px auto;
+    padding-top: 25px;
+    text-align: center;
+    border-radius: 8px;
+}

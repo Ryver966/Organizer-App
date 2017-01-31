@@ -1,46 +1,47 @@
 <html>
 
-<head>
-    <link rel='stylesheet' href='organizer.css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src='organizer.js'></script>
-    <title>My Organizer App</title>
-</head>
+    <head>
+        <link rel='stylesheet' href='organizer.css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='organizer.js'></script>
+        <title>My Organizer App</title>
+    </head>
 
-<body>
-    <button class='unlockScr' onclick='goToMain()'>
-<div class='lockScreen'>
-    <i class='material-icons' style='font-size: 12em;'>today</i><br>
-<p class='unlockScrTxt'>My
-    <span style='color:#fff'>Organizer</span> App</p>
-<footer class='unlockFooter'>>>Tap to unlock screen<<</footer>
+    <body>
+        <button class='unlockScr' onclick='goToMain()'>
+            <div class='lockScreen'>
+            <i class='material-icons' style='font-size: 12em;'>today</i><br>
+            <p class='unlockScrTxt'>My<span style='color:#fff'>Organizer</span> App</p>
+            <footer class='unlockFooter'>>>Tap to unlock screen<<</footer>
         </div>
         </button>
         <div class='main'>
             <h1>My<span style='color:#fff'>Organizer</span> App</h1>
-<input type='text' id='userName' class='user' placeholder='User Name'><br><br>
-<input type='password' id='password' placeholder='Password' onkeyup='doSth(event, "loginBut")'><br><br>
-<button class='loginBut' onclick='logIn()'>Sign In</button><br><br>
-<button class='accFunc' onclick='createAcc()'>Create new account</button><br>
-<button class='accFunc'>Forgot password?</button>
-</div>
-<div class='tasksScreen'>
-    <p class='warning'>Please enter task</p><br><br>
-    <input type='text' class='taskName' onkeyup='doSth(event, "addTaskBut")' placeholder='Enter what you need to do'><button class='addTaskBut' onclick='addTask()'>+</button>
-<div class='list'><br></div>
-</div>
-<div class='createAcc'>
-<p class='newAccTxt'>Create<span style='color: #1E90FF'>New</span> Account</p>
-<form>
-<input type='email' class='newUserEmail' onkeyup='doSth(event, "registerBut")' placeholder='name@domain.com' required><br><br>
-<input type='text' class='newUserName' onkeyup='doSth(event, "registerBut")' placeholder='User name' required><br><br>
-<input type='password' class='newUserPass' onkeyup='doSth(event, "registerBut")' placeholder='Password' required><br><br>
-<input type='password' class='newUserPassRe' onkeyup='doSth(event, "registerBut")' placeholder='Repeat Password' required><br><br>
-<button type ='button' class='registerBut' onclick='signUpFunc()'>Sign Up</button>
-<p class='regMsg'></p>
-</form>
+            <input type='text' id='userName' class='user' placeholder='User Name'><br><br>
+            <input type='password' id='password' placeholder='Password' onkeyup='doSth(event, "loginBut")'><br><br>
+            <button class='loginBut' onclick='logIn()'>Sign In</button><br><br>
+            <button class='accFunc' onclick='createAcc()'>Create new account</button><br>
+            <button class='accFunc'>Forgot password?</button>
+        </div>
+        <div class='tasksScreen'>
+            <p class='warning'>Please enter task</p><br><br>
+            <input type='text' class='taskName' onkeyup='doSth(event, "addTaskBut")' placeholder='Enter what you need to do'><button class='addTaskBut' onclick='addTask()'>+</button>
+                <div class='list'><br></div>
+        </div>
+        <div class='createAcc'>
+            <p class='newAccTxt'>Create <span style='color: #1E90FF'>New</span> Account</p>
+            <form>
+                <input type='email' class='newUserEmail' onkeyup='doSth(event, "registerBut")' placeholder='name@domain.com' required><br><br>
+                <input type='text' class='newUserName' onkeyup='doSth(event, "registerBut")' placeholder='User name' required><br><br>
+                <input type='password' class='newUserPass' onkeyup='doSth(event, "registerBut")' placeholder='Password' required><br><br>
+                <input type='password' class='newUserPassRe' onkeyup='doSth(event, "registerBut")' placeholder='Repeat Password' required><br><br>
+                <button type ='button' class='registerBut' onclick='signUpFunc()'>Sign Up</button>
+                <p class='regMsg'></p>
+            </form>
+        </div>
+        <div>
 
-</div>
+        </div>
 </body>
 
 </html>

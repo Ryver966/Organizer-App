@@ -95,10 +95,11 @@ window.onload = function () {
             if (fields[2].value === fields[3].value) {
                 regMsg.innerHTML = 'Your account is created';
                 regMsg.style.display = 'block';
-                console.log('done');
             } else {
                 alert(`Passwords don't match`);
             }
+        } else {
+            alert('Check all fields');
         }
     }
 }

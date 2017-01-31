@@ -110,7 +110,7 @@ window.onload = function () {
         taskScr.style.display = 'none';
         newAcc.style.display = 'none';
         recoverPass.style.visibility = 'visible';
-    }
+    };
 
     window.recoverPassFunc = function (){
         const recPass = document.getElementsByClassName('regMsg')[1];

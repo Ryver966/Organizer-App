@@ -113,8 +113,17 @@ window.onload = function () {
     }
 
     window.recoverPassFunc = function (){
-        if(document.getElementsByClassName('forgotPasswordMail')[0].checkValidity() === true){
-            document.getElementsByClassName('regMsg')[1].style.display = 'block';
+        const recPass = document.getElementsByClassName('regMsg')[1];
+        const recPassMail = document.getElementsByClassName('forgotPasswordMail')[0];
+        if(recPassMail.checkValidity() === true){
+            recPass.style.display = 'block';
+            if(recPassMail.value === 'admin@admin.com'){
+                recPass.innerHTML = 'E-mail with new password was sent';
+            } else {
+                recPass.innerHTML = 'Account with this email does not exist';
+            }
+        } else {
+            alert('Check e-mail field');
         }
     }
 }

@@ -82,7 +82,7 @@ window.onload = function () {
         newAcc.style.visibility = 'visible';
     };
 
-    window.signUpFunc = function () {
+   /* window.signUpFunc = function () {
         const mail = document.getElementsByClassName('newUserEmail')[0];
         const name = document.getElementsByClassName('newUserName')[0];
         const pass = document.getElementsByClassName('newUserPass')[0];
@@ -94,7 +94,7 @@ window.onload = function () {
         const mailPatt= /^[a-zA-Z0-9.-]+@[a-zA-z0-9.-]+\.[a-zA-Z]{2,4}$/;
         const passPatt = /[abc]+[0-9]/;
         const passPatt1 = /[0-9]+[abc]/;
-        if (mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0) {
+        /*if (mail.value.length === 0 || name.value.length === 0 || pass.value.length === 0 || passRe.value.length === 0) {
             regMsg.innerHTML = 'Please complete all fields';
         } else if (pass.value !== passRe.value) {
             regMsg.innerHTML = 'Password in both fields must be the same';
@@ -106,6 +106,6 @@ window.onload = function () {
             regMsg.innerHTML = 'Password should have letters and numbers';
         } else {
             regMsg.innerHTML = 'Your account has been created';
-        }
-    }
+        //}
+    }*/
 }

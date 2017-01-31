@@ -230,3 +230,17 @@ hr{
     text-align: center;
     border-radius: 8px;
 }
+
+input:required:invalid, input:focus:invalid, input:hover{
+    background-image: url('./img/not.png');
+    background-size: 10px 10px;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+input:required:valid, input:hover{
+    background-image: url('./img/ok.png');
+    background-size: 10px 10px;
+    background-position: right top;
+    background-repeat: no-repeat;
+}

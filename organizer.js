@@ -91,9 +91,14 @@ window.onload = function () {
 
     window.signUpFunc = function () {
         const regMsg = document.getElementsByClassName('regMsg')[0];
-        if (fields.every(arrayItem => arrayItem.checkValidity() == true)) {
-            regMsg.innerHTML = 'You created account';
-            regMsg.style.display = 'block';
+        if (fields.every(arrayItem => arrayItem.checkValidity() === true)) {
+            if (fields[2].value === fields[3].value) {
+                regMsg.innerHTML = 'Your account is created';
+                regMsg.style.display = 'block';
+                console.log('done');
+            } else {
+                alert(`Passwords don't match`);
+            }
         }
     }
 }

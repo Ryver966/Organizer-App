@@ -245,3 +245,30 @@ input:required:valid{
     background-position: right top;
     background-repeat: no-repeat;
 }
+
+.forgotPassScr{
+    visibility: hidden;
+    width: 405px;
+    height: 500px;
+    background-color:  #1F1F1F;
+    margin: 0 auto;
+    padding-top: 9%;
+    text-align: center;
+}
+
+.forgotPassBut{
+    background-color: #1E90FF;
+    border: none;
+    color: #1F1F1F;
+    width: 45%;
+    height: 8%;
+    font-family: Avantgarde, sans-serif;
+}
+
+.recoverPassTxt{
+    margin-top: auto;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: Avantgarde, sans-serif;
+    color: #fff;
+}

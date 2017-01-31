@@ -5,6 +5,7 @@ window.onload = function () {
     const taskScr = document.getElementsByClassName('tasksScreen')[0];
     const newAcc = document.getElementsByClassName('createAcc')[0];
     const lockScreen = document.getElementsByClassName('unlockScr')[0];
+    const recoverPass = document.getElementsByClassName('forgotPassScr')[0];
 
     window.goToMain = function () {
         console.log(main);
@@ -100,6 +101,20 @@ window.onload = function () {
             }
         } else {
             alert('Check all fields');
+        }
+    }
+
+    window.forgotPassFunc = function (){
+        main.style.display = 'none';
+        lockScreen.style.display = 'none';
+        taskScr.style.display = 'none';
+        newAcc.style.display = 'none';
+        recoverPass.style.visibility = 'visible';
+    }
+
+    window.recoverPassFunc = function (){
+        if(document.getElementsByClassName('forgotPasswordMail')[0].checkValidity() === true){
+            document.getElementsByClassName('regMsg')[1].style.display = 'block';
         }
     }
 }

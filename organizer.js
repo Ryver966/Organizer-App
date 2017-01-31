@@ -91,7 +91,7 @@ window.onload = function () {
 
     window.signUpFunc = function () {
         const regMsg = document.getElementsByClassName('regMsg')[0];
-        if (fields.every(arrayItem => arrayItem.validity = true)) {
+        if (fields.every(arrayItem => arrayItem.checkValidity() == true)) {
             regMsg.innerHTML = 'You created account';
             regMsg.style.display = 'block';
         }

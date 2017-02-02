@@ -33,36 +33,27 @@ window.onload = function () {
             loginBut.click();
         };
     };
-    //ADD TASKS
+
+//ADD TASKS
     window.newTask = function (taskName) {
-        //Label
-        const newlabel = document.createElement("Label");
-        newlabel.for = taskName;
-        newlabel.innerHTML = taskName.value;
-        newlabel.className = 'taskLabel';
-        newlabel.id = taskName;
-        //Delete icon
-        const deleteIcon = document.createElement('i');
-        deleteIcon.className = 'material-icons';
-        deleteIcon.id = 'deleteIcon';
-        deleteIcon.innerHTML = 'delete';
-        //Delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.className = 'deleteButton';
-        //deleteButton.onclick = deleteTask();
-        //Checkbox
-        const newCheckbox = document.createElement('input');
-        newCheckbox.type = 'checkbox';
-        newCheckbox.className = 'taskCheckbox';
-        newCheckbox.id = taskName;
-        //Adding all to element
-        list.appendChild(newCheckbox);
-        list.appendChild(newlabel);
-        list.appendChild(deleteButton);
-        deleteButton.appendChild(deleteIcon);
-        list.appendChild(document.createElement('hr'));
+        const listItem = document.createElement('li');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        listItem.appendChild(checkbox);
+        const itemTxt = document.createTextNode(task.value);
+        listItem.appendChild(itemTxt);
+        list.appendChild(listItem);
 
         task.value = '';
+    };
+
+    window.deleteTask = function () {
+        const li = list.children;
+        for(const i = 0; i < li.length; i ++){
+            if(li[i] && li[i].children[0].checked){
+                list.removeChild(li[i]);
+            };
+        };
     };
 
     window.addTask = function () {
@@ -75,7 +66,8 @@ window.onload = function () {
             const addToList = newTask(task);
         };
     };
-    //REGISTER
+
+//REGISTER
     window.createAcc = function () {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
@@ -104,6 +96,7 @@ window.onload = function () {
         }
     }
 
+//RECOVER PASSWORD
     window.forgotPassFunc = function (){
         main.style.display = 'none';
         lockScreen.style.display = 'none';

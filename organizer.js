@@ -65,8 +65,8 @@ window.onload = function () {
             warning.style.display = 'block';
         } else {
             warning.style.display = 'none';
-            list.style.visibility = 'visible'
-            const addToList = newTask(task);
+            list.style.visibility = 'visible';
+            newTask(task);
         };
     };
 

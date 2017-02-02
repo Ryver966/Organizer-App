@@ -148,18 +148,15 @@ p{
     padding: 0px;
     margin: 0px;
     visibility: hidden;
+    color: #fff;
+    font-size: 120%;
+    list-style-type: none;
 }
 
-.taskCheckbox{
+input[type=checkbox]{
+    float: left;
     width: 20px;
     height: 20px;
-    float: left;
-}
-
-.taskLabel{
-
-    font-size: 120%;
-    color: #FFF;
 }
 
 hr{
@@ -178,14 +175,17 @@ hr{
 }
 
 .deleteTaskButton{
-    background: none;
+    background-color: #fff;
     border: none;
-    height: 32px;
-    width: 32px;
-    float: right;
-    margin-right: 15px;
-    display: flex;
-    justify-content: flex-start;
+    color: #1f1f1f;
+    width: 100%;
+    height: 4%;
+    font-family: Avantgarde, sans-serif;
+}
+
+.deleteTaskButton:hover{
+    background-color: red;
+    color: #fff;
 }
 
 .createAcc{

@@ -39,10 +39,13 @@ window.onload = function () {
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        listItem.class = 'listItem';
         listItem.appendChild(checkbox);
         const itemTxt = document.createTextNode(task.value);
+        itemTxt.class = 'taskLabel';
         listItem.appendChild(itemTxt);
         list.appendChild(listItem);
+        list.appendChild(document.createElement('hr'));
 
         task.value = '';
     };

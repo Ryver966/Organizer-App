@@ -39,24 +39,16 @@ window.onload = function () {
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        listItem.class = 'listItem';
+        checkbox.id = 'checkbox';
+        checkbox.name = task.value;
         listItem.appendChild(checkbox);
+
         const itemTxt = document.createTextNode(task.value);
-        itemTxt.class = 'taskLabel';
         listItem.appendChild(itemTxt);
         list.appendChild(listItem);
         list.appendChild(document.createElement('hr'));
 
         task.value = '';
-    };
-
-    window.deleteTask = function () {
-        const li = list.children;
-        for(const i = 0; i < li.length; i ++){
-            if(li[i] && li[i].children[0].checked){
-                list.removeChild(li[i]);
-            };
-        };
     };
 
     window.addTask = function () {
@@ -68,6 +60,13 @@ window.onload = function () {
             list.style.visibility = 'visible';
             newTask(task);
         };
+    };
+
+    window.deleteTask = function () {
+        if(document.getElementById('checkbox').checked === true){
+            const itemNode = document.getElementsByName(checkbox.name)[0];
+            itemNode.parentNode.removeChild(itemNode);
+        }
     };
 
 //REGISTER

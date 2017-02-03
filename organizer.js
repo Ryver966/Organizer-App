@@ -34,19 +34,17 @@ window.onload = function () {
         };
     };
 
-//ADD TASKS
+    //ADD TASKS
     window.newTask = function (taskName) {
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.id = 'checkbox';
-        checkbox.name = task.value;
         listItem.appendChild(checkbox);
 
         const itemTxt = document.createTextNode(task.value);
         listItem.appendChild(itemTxt);
         list.appendChild(listItem);
-        list.appendChild(document.createElement('hr'));
+        listItem.appendChild(document.createElement('hr'));
 
         task.value = '';
     };
@@ -63,13 +61,16 @@ window.onload = function () {
     };
 
     window.deleteTask = function () {
-        if(document.getElementById('checkbox').checked === true){
-            const itemNode = document.getElementsByName(checkbox.name)[0];
-            itemNode.parentNode.removeChild(itemNode);
+        console.log('do something');
+        for (let i = 0; i < list.children.length; i++) {
+            if (list.children[i] && list.children[i].children[0].checked) {
+                console.log(list[i]);
+                list.removeChild(list.children[i]);
+            }
         }
     };
 
-//REGISTER
+    //REGISTER
     window.createAcc = function () {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
@@ -98,8 +99,8 @@ window.onload = function () {
         }
     }
 
-//RECOVER PASSWORD
-    window.forgotPassFunc = function (){
+    //RECOVER PASSWORD
+    window.forgotPassFunc = function () {
         main.style.display = 'none';
         lockScreen.style.display = 'none';
         taskScr.style.display = 'none';
@@ -107,12 +108,12 @@ window.onload = function () {
         recoverPass.style.visibility = 'visible';
     };
 
-    window.recoverPassFunc = function (){
+    window.recoverPassFunc = function () {
         const recPass = document.getElementsByClassName('regMsg')[1];
         const recPassMail = document.getElementsByClassName('forgotPasswordMail')[0];
-        if(recPassMail.checkValidity() === true){
+        if (recPassMail.checkValidity() === true) {
             recPass.style.display = 'block';
-            if(recPassMail.value === 'admin@admin.com'){
+            if (recPassMail.value === 'admin@admin.com') {
                 recPass.innerHTML = 'E-mail with new password was sent';
             } else {
                 recPass.innerHTML = 'Account with this email does not exist';

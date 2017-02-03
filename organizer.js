@@ -39,12 +39,13 @@ window.onload = function () {
         const listItem = document.createElement('li');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.id = 'checkbox';
         listItem.appendChild(checkbox);
 
         const itemTxt = document.createTextNode(task.value);
         listItem.appendChild(itemTxt);
-        list.appendChild(listItem);
         listItem.appendChild(document.createElement('hr'));
+        list.appendChild(listItem);
 
         task.value = '';
     };
@@ -62,9 +63,8 @@ window.onload = function () {
 
     window.deleteTask = function () {
         console.log('do something');
-        for (let i = 0; i < list.children.length; i++) {
+        for (let i = 1; i < list.children.length; i++) {
             if (list.children[i] && list.children[i].children[0].checked) {
-                console.log(list[i]);
                 list.removeChild(list.children[i]);
             }
         }

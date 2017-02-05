@@ -1,0 +1,23 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "testing Organizer App",
+  "main": "organizer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryver966/Organizer-App.git"
+  },
+  "author": "Ryver966",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryver966/Organizer-App/issues"
+  },
+  "homepage": "https://github.com/Ryver966/Organizer-App#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

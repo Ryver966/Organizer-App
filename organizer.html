@@ -42,7 +42,7 @@
         </div>
         <div class='forgotPassScr'>
             <p class='recoverPassTxt'>Recover Password</p>
-            <form>
+            <form onsubmit='return false;'>
                 <input type='email' class='forgotPasswordMail' onkeyup='doSth(event, "forgotPassBut")' placeholder='Your email adress' required><br><br>
                 <button type='button' class='forgotPassBut' onclick='recoverPassFunc()'>Send</button>
                 <p class='regMsg'></p>

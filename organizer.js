@@ -123,14 +123,3 @@ window.onload = function () {
         }
     }
 }
-
-module.exports = {
-    goToMain: goToMain
-    /*logIn: logIn,
-    newTask: newTask,
-    addTask: addTask,
-    deleteTask: deleteTask,
-    signUpFunc: signUpFunc,
-    forgotPassFunc: forgotPassFunc,
-    recoverPassFunc: recoverPassFunc*/
-};
